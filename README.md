@@ -18,7 +18,119 @@ This project is a **Web Scraper with Chatbot CLI**, leveraging **RAG (Retrieval-
 - **CLI** - Command user interface provided for the test.
 - **AI/ML:** LLM API (Groq API)
 - **Model used for embedding** : **Xenova/all-MiniLM-L6-v2**
+## 🖥️ Example Terminal Output
 
+```sh
+PS D:\Repos\Scrap\Chatbot> node index.js
+? Enter URL to scrap: (node:10472) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. 
+Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Enter URL to scrap: https://k8school.com/short-story-in-english-with-moral/
+✔ The URL is already Scraped, Do You Want to Scrap it again? yes
+
+-------------------------------------------------------------------
+Scraping the URL
+-------------------------------------------------------------------
+---------------------------------------------------------------
+Chunking the Scraped Data
+---------------------------------------------------------------
+-----------------------------------------------------------------
+Embedding the Chunks
+-----------------------------------------------------------------
+-----------------------------------------------------------
+Storing the Embeddings externally
+-----------------------------------------------------------
+------------------------------------------------------------------
+Scraping Completed
+------------------------------------------------------------------
+✔ Enter Your query related to the URL content:
+✔ Enter Your query related to the URL content: tell me a story
+I'd be happy to tell you a story!
+
+Here's a classic short story in English with a moral:
+
+The Two Frogs:
+
+Once upon a time, in a small pond, there lived two frogs named Ravi and Rohan. They were the best of friends and would spend their days playing, swimming, and exploring the pond.
+
+One day, while they were sitting on a lily pad, they noticed a group of frogs gathered around a small stream. The stream was calm and clear, with a few fish swimming in it. The group of frogs were having a lively discussion about something.
+
+Ravi and Rohan curiously approached the group and listened in. They soon realized that the frogs were talking about the beauty of the stream and how it was a great place to relax.
+
+After a while, Ravi turned to Rohan and exclaimed, "Wow, I wish we had a stream like that in our pond!"
+
+Rohan replied, "Why don't we just go and ask the other frogs if they can help us find one?"
+
+Ravi thought for a moment and then said, "That's a great idea! But first, let's make sure that we are not disturbing anyone."
+
+So, they quietly approached the group and asked if they could help them find a stream like the one they saw. The group of frogs was happy to help and accompanied Ravi and Rohan back to their pond.
+
+After searching for a while, they finally found a small stream flowing into their pond. The frogs were overjoyed and thanked Ravi and Rohan for bringing the stream to their home.
+
+Moral: Words are powerful to motivate or demotivate someone. Choose them wisely.
+
+And, you can read more stories like this on our official website: https://k8school.com/short-story-in-english-with-moral/
+
+If you need more moral tales or short stories in English, I can help you with it!
+Citation: https://k8school.com/short-story-in-english-with-moral/
+✔ Enter Your query related to the url content: Do you know more stories
+Based on the provided context, it appears that you're interested in finding more short stories in English with moral. Besides the link provided earlier, here are some additional resources and story collections that might interest you:
+
+1. Short Stories 101: A website with a vast collection of short stories, essays, and poems from various authors. You can filter stories by genre, theme, or cultural setting.
+
+Link: https://www.shortstories101.com/
+
+2. Storyweaver: An online platform that offers a diverse range of short stories from around the world. You can search by theme, age group, and more.   
+
+Link: https://www.storyweaver.org.in/
+
+3. Lit2Go: A digital library of over 100,000 poems, short stories, and plays by various authors. You can search by genre, title, or author.
+
+Link: https://lit2go.org/
+
+4. Authors’ websites: Many famous authors have their own websites with free short stories and essays. Some popular ones include:
+
+   a. Neil Gaiman: https://neilgaiman.com/short-stories/
+   b. Alice Walker: https://alicewalker.com/short-stories/
+   c. Chris Crutcher: https://www.chriscrutcher.com/short-stories/
+
+5. Online educational resources: Several educational websites and platforms offer short stories and moral tales, often with accompanying lesson plans and activities. Some notable ones include:
+
+   a. ReadWriteThink: https://www.readwritethink.org/short-stories/
+   b. Scholastic: https://www.scholastic.com/teachers/storytime/
+   c. PBS Kids: https://www.pbskids.org/short-stories/
+
+Please note that some of these resources may require registration or have age-specific content. Be sure to review the content before sharing it with your students.
+
+I hope these links and resources help you find the short stories you're looking for!
+Citation: https://k8school.com/short-story-in-english-with-moral/
+✔ Enter Your query related to the url content: Tell me another story
+I'd be happy to tell you another story. Here's one:
+
+**The Story of a Little Bird's Big Dreams**
+
+Once upon a time, in a small nest on a tree branch, lived a little bird named Luna. Luna was like any other bird, who spent most of her days chirping songs and flying around. However, unlike her fellow birds, Luna had big dreams. She wanted to fly beyond the trees and explore the world beyond.        
+
+Luna would often look up at the sky and imagine herself soaring high, feeling the wind beneath her wings, and seeing the world from a different perspective. One day, she decided to take the leap and started practicing her flying. She would flap her small wings as hard as she could, stretch her neck, and lift off the ground. But no matter how hard she tried, she couldn't seem to get higher than a few feet off the ground.
+
+Feeling discouraged, Luna began to lose hope. She thought to herself, "I'm just a little bird, what can I do that no one else can?" Just then, an old owl perched on a nearby branch called out to her, "What are you doing, Little Bird?"
+
+Luna looked up at the owl and explained her dream to fly high. The owl listened carefully and then said, "Ah, yes! I know just what you need." The owl taught Luna that it's not just about flapping your wings hard, but also about going with the wind and learning to glide.
+
+With newfound determination, Luna started practicing again. This time, she focused on feeling the wind beneath her wings and learning to glide. And guess what? She started to soar higher and higher! She climbed up the sky, feeling free and empowered.
+
+**Moral of the Story:**
+
+Don't be afraid to chase your dreams, no matter how big or small they may seem. Believe in yourself, take calculated risks, and never give up. And most importantly, learn to adapt and go with the flow.
+
+**Links to Help You:**
+
+* To learn more about storytelling and its benefits for students, check out this article from BBC Bitesize: https://www.bbc.co.uk/bitesize/topics/zsbqm39/articles/zsmtn9q
+* For more stories and moral tales, visit this link: https://www.shortstories63.com/
+* Explore the world of online learning and discover how it can help you achieve your goals: https://k8school
+Citation: https://k8school.com/short-story-in-english-with-moral/
+? Enter Your query related to the url content:
+```
 ## Installation
 ### Prerequisites
 - Node.js & npm installed
