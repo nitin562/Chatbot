@@ -10,6 +10,7 @@ This project is a **Web Scraper with Chatbot CLI**, leveraging **RAG (Retrieval-
 - Chooses a **CLI interface**.
 - Optimize performance using **async techniques**.
 - Use a **PineCone as Vector DB** for efficient retrieval and storing embeddings.
+- Providing relevant links in output if they present in query related data.
 
 ## Tech Stack
 - **Backend:** Node.js, Express.js, Puppeteer/Cheerio (for scraping)
@@ -87,7 +88,7 @@ This project is a **Web Scraper with Chatbot CLI**, leveraging **RAG (Retrieval-
 ## Edge cases that i can't handled but know that it will occur in future
 - Broarder Query from user without good relevant topics that can help in better searches in pinecone i.e tell me questions: User wants questions from url data but for query retrieval, it becomes irrelevant. **Solution** can be using frequent words attach with query before search so that relevant response chances can become high. 
 - Chunking mechanism will fall when a chunk itself has token length greater than 512. It can be solved if we use overlapping technique to chunk data on the basis of length instead of punctuations but i dont know more about it.
-- If Groq api payload limit exceeds (yet only some chunks are sent), it may cause error.
+- If Groq api payload limit exceeds (yet only some chunks are sent), it may cause error. Somehow, handled by limiting the topK value and removing irrelvant css, js scraping data for some extent.
 
 ## Future Improvements
 - Implement **authentication & user management with a database instead of localStorage in server**.
