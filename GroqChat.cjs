@@ -2,13 +2,17 @@ const { Groq } = require("groq-sdk");
 require("dotenv").config();
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
- async function getResponseFromGroq(content) {
-  const chatCompletion = await getGroqChatCompletion(content);
-  // Print the completion returned by the LLM.
-  console.log(chatCompletion.choices[0]?.message?.content || "");
+async function getResponseFromGroq(content) {
+  try {
+    const chatCompletion = await getGroqChatCompletion(content);
+    // Print the completion returned by the LLM.
+    console.log(chatCompletion.choices[0]?.message?.content || "");
+  } catch (error) {
+    console.log("Can't connect to GROQ LLM");
+  }
 }
 
- async function getGroqChatCompletion(content) {
+async function getGroqChatCompletion(content) {
   return groq.chat.completions.create({
     messages: [
       {
@@ -23,4 +27,4 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
     model: "llama3-8b-8192",
   });
 }
-module.exports=getResponseFromGroq
+module.exports = getResponseFromGroq;
