@@ -13,7 +13,7 @@ This project is a **Web Scraper with Chatbot CLI**, leveraging **RAG (Retrieval-
 - Providing relevant links in output if they present in query related data.
 
 ## Tech Stack
-- **Backend:** Node.js, Express.js, Puppeteer/Cheerio (for scraping)
+- **Backend:** Node.js, Puppeteer/Cheerio (for scraping)
 - **Database:** Pinecone 
 - **CLI** - Command user interface provided for the test.
 - **AI/ML:** LLM API (Groq API)
