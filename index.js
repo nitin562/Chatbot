@@ -35,7 +35,7 @@ const init = async (url) => {
     if (answer.ReScrap == "no") {
       const { success, data } = await getMetaData(url);
       if (success) {
-        console.log(data);
+    
         return { success, data };
       }
       //if metadata is not found so scraping should begin again
@@ -78,25 +78,29 @@ const askQuery = async (url, data) => {
 };
 const query = async (query, url, data) => {
   //query
-  const queryEmbedding = await generateEmbedding(query);
+  let relevantQuery = `${query}. Provide relevant complete links with protocols if available.` // so that links can be come
+  const queryEmbedding = await generateEmbedding(relevantQuery);
   // console.log(queryEmbedding);
   let query_val = Array.from(queryEmbedding.data);
-  const searchResponse = await queryToPine(query_val, 10, url);
+  const searchResponse = await queryToPine(query_val, 3, url);
   // console.log(searchResponse);
   let context = "";
-
+  let Citations=url
   if (searchResponse && searchResponse.matches) {
     const sourcesArr = searchResponse.matches.map((e) => {
       // console.log(e.metadata)
       // console.log(e)
       const postion = e.metadata.idx;
+      Citations=e.metadata.url
       return data[postion];
     });
     context = sourcesArr.join(" ");
   }
-  const content = `Context:\n${context}\n\nUser Query: ${query}`;
+  // console.log(context)
+  const content = `Context:\n${context}\n\nUser Query: ${query}. If you Know some links that can help me, then also show them`;
   // console.log(content);
   await getResponseFromGroq(content);
+  console.log("Citation:",Citations)
 };
 const main = async () => {
   let url = "";

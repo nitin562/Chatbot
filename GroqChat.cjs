@@ -8,6 +8,7 @@ async function getResponseFromGroq(content) {
     // Print the completion returned by the LLM.
     console.log(chatCompletion.choices[0]?.message?.content || "");
   } catch (error) {
+    console.log(error)
     console.log("Can't connect to GROQ LLM");
   }
 }
@@ -25,6 +26,7 @@ async function getGroqChatCompletion(content) {
       },
     ],
     model: "llama3-8b-8192",
+    max_tokens:500
   });
 }
 module.exports = getResponseFromGroq;

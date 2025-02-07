@@ -32,7 +32,7 @@ const saveMetaData = async (data, url) => {
     
     const text = await fs.readFile(file, "utf8");
     let dataObj={}
-    console.log("text ",text)
+   
     if(text!=""){
        dataObj = JSON.parse(text); //{url:[]}
 
